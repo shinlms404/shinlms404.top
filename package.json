@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-app",
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "6.13.1",
+    "nuxt": "^3.15.4",
+    "nuxt-icon": "^1.0.0-beta.7",
+    "nuxt-lodash": "^2.5.3",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "type": "module"
+}
