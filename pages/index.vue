@@ -2,7 +2,7 @@
 <template>
   <div
     :class="isDarkMode ? 'bg-black text-white' : 'bg-white text-black'"
-    class="min-h-screen flex flex-col font-mono transition-colors duration-300 relative p-8"
+    class="min-h-screen flex flex-col font-mono transition-colors duration-300 relative"
   >
     <StarsBackground
       v-if="isDarkMode"
@@ -10,17 +10,17 @@
       :star-shadow-before="starShadowBefore"
       :star-shadow-after="starShadowAfter"
     />
-    <header class="flex justify-end p-2">
+    <header class="flex justify-end p-4">
       <DarkModeToggle :is-dark-mode="isDarkMode" @toggle="toggleDarkMode" />
     </header>
     <div class="flex-1 flex justify-center">
-      <div class="flex flex-col justify-center items-start">
+      <div class="flex flex-col justify-center items-start p-8">
         <ProfileSection :is-dark-mode="isDarkMode" />
         <SocialLinks :is-dark-mode="isDarkMode" />
         <SupportLinks :is-dark-mode="isDarkMode" />
       </div>
     </div>
-    <footer class="p-8 text-center text-sm opacity-75">
+    <footer class="py-2 px-4 text-center text-sm opacity-75">
       Made with ❤️ by
       <a href="https://shinlms404.top" class="underline">Charlie Chan</a>
     </footer>
