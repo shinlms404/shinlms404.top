@@ -10,9 +10,9 @@
       :star-shadow-before="starShadowBefore"
       :star-shadow-after="starShadowAfter"
     />
-    <Header class="flex justify-end p-8">
+    <header class="flex justify-end p-8">
       <DarkModeToggle :is-dark-mode="isDarkMode" @toggle="toggleDarkMode" />
-    </Header>
+    </header>
     <div class="flex-1 flex justify-center">
       <div class="flex flex-col justify-center items-start">
         <ProfileSection :is-dark-mode="isDarkMode" />
