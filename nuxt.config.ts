@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-lodash", "@nuxt/icon"]
+  modules: ["@nuxtjs/tailwindcss", "nuxt-lodash", "@nuxt/icon"],
+  compatibilityDate: "2025-03-02"
 });

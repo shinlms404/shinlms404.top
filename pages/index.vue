@@ -2,7 +2,7 @@
 <template>
   <div
     :class="isDarkMode ? 'bg-black text-white' : 'bg-white text-black'"
-    class="min-h-screen flex flex-col font-mono transition-colors duration-300 relative"
+    class="min-h-screen flex flex-col font-mono transition-colors duration-300 relative p-8"
   >
     <StarsBackground
       v-if="isDarkMode"
@@ -10,7 +10,7 @@
       :star-shadow-before="starShadowBefore"
       :star-shadow-after="starShadowAfter"
     />
-    <header class="flex justify-end p-8">
+    <header class="flex justify-end p-2">
       <DarkModeToggle :is-dark-mode="isDarkMode" @toggle="toggleDarkMode" />
     </header>
     <div class="flex-1 flex justify-center">
