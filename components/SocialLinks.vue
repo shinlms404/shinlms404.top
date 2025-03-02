@@ -1,5 +1,5 @@
 <template>
-  <div class="flex jus items-start gap-x-4 my-5">
+  <div class="flex jus items-start gap-x-4 my-2">
     <a v-for="link in links" :key="link.name" :href="link.url" target="_blank">
       <Icon
         :name="link.icon"

@@ -10,12 +10,13 @@
       :star-shadow-before="starShadowBefore"
       :star-shadow-after="starShadowAfter"
     />
-    <header class="flex justify-end p-4">
+    <header class="flex justify-between p-4">
       <DarkModeToggle :is-dark-mode="isDarkMode" @toggle="toggleDarkMode" />
     </header>
     <div class="flex-1 flex justify-center">
       <div class="flex flex-col justify-center items-start p-8">
         <ProfileSection :is-dark-mode="isDarkMode" />
+        <ProjectLinks :is-dark-mode="isDarkMode" />
         <SocialLinks :is-dark-mode="isDarkMode" />
         <SupportLinks :is-dark-mode="isDarkMode" />
       </div>

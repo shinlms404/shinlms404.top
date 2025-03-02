@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-start">
-    <div class="flex justify-start w-full gap-8">
+    <div class="flex justify-start w-full">
       <div
         class="w-24 h-24 rounded-full overflow-hidden border-2"
         :class="isDarkMode ? 'border-gray-700' : 'border-gray-300'"
