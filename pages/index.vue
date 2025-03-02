@@ -20,6 +20,10 @@
         <SupportLinks :is-dark-mode="isDarkMode" />
       </div>
     </div>
+    <footer class="p-8 text-center text-sm opacity-75">
+      Made with ❤️ by
+      <a href="https://shinlms404.top" class="underline">Charlie Chan</a>
+    </footer>
   </div>
 </template>
 
