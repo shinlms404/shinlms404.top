@@ -1,14 +1,3 @@
-<template>
-  <div
-    v-if="isDarkMode"
-    class="stars"
-    :style="{
-      '--star-shadow-before': starShadowBefore,
-      '--star-shadow-after': starShadowAfter
-    }"
-  ></div>
-</template>
-
 <script setup>
 defineProps({
   isDarkMode: Boolean,
@@ -16,6 +5,17 @@ defineProps({
   starShadowAfter: String
 });
 </script>
+
+<template>
+  <div
+    v-show="isDarkMode"
+    class="stars"
+    :style="{
+      '--star-shadow-before': starShadowBefore,
+      '--star-shadow-after': starShadowAfter
+    }"
+  ></div>
+</template>
 
 <style scoped>
 .stars {

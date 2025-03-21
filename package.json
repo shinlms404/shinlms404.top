@@ -17,5 +17,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@unocss/nuxt": "^66.1.0-beta.6",
+    "unocss": "^66.1.0-beta.6"
+  }
 }

@@ -18,7 +18,7 @@ export const useStars = () => {
   };
 
   onMounted(() => {
-    generateStarShadows(20);
+    generateStarShadows(30);
   });
 
   return {

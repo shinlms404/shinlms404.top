@@ -1,22 +1,3 @@
-<template>
-  <div class="flex jus items-start gap-x-4 my-5">
-    <a
-      v-for="link in links"
-      :key="link.name"
-      :href="link.url"
-      target="_blank"
-      class="flex justify-center items-center gap-1 rounded-lg border px-3 py-2"
-    >
-      <Icon
-        :name="link.icon"
-        :style="{ color: isDarkMode ? 'white' : 'black' }"
-        size="1.4em"
-      />
-      {{ link.text }}
-    </a>
-  </div>
-</template>
-
 <script setup>
 defineProps({
   isDarkMode: Boolean
@@ -31,3 +12,18 @@ const links = [
   }
 ];
 </script>
+
+<template>
+  <div class="flex jus items-start gap-x-4 my-5">
+    <a
+      v-for="link in links"
+      :key="link.name"
+      :href="link.url"
+      target="_blank"
+      class="flex justify-center items-center gap-1 rounded-lg border px-3 py-2"
+    >
+      <Icon :name="link.icon" size="1.4em" />
+      {{ link.text }}
+    </a>
+  </div>
+</template>
