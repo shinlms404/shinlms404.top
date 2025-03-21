@@ -2,7 +2,6 @@
 
 <script setup>
 const { isDarkMode, toggleDarkMode } = useDarkMode();
-const { starShadowBefore, starShadowAfter } = useStars();
 
 useHead({
   title: "Charlie Chan - Personal Website",
@@ -20,11 +19,7 @@ useHead({
   <div
     class="bg-base text-base min-h-screen flex flex-col font-mono transition-colors duration-500 relative"
   >
-    <StarsBackground
-      :is-dark-mode="isDarkMode"
-      :star-shadow-before="starShadowBefore"
-      :star-shadow-after="starShadowAfter"
-    />
+    <StarsBackground />
     <header class="flex justify-between px-10 min-h-20">
       <nav></nav>
       <div class="flex items-center gap-5">

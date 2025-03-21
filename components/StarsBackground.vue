@@ -1,20 +1,42 @@
-<script setup>
-defineProps({
-  isDarkMode: Boolean,
-  starShadowBefore: String,
-  starShadowAfter: String
+<script setup lang="ts">
+const stars = ref([]);
+
+function generateStars() {
+  const count = 150;
+  const starsArray = [];
+
+  for (let i = 0; i < count; i++) {
+    starsArray.push({
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 1 + 1,
+      duration: Math.random() * 1 + 1
+    });
+  }
+
+  return starsArray;
+}
+
+onMounted(() => {
+  stars.value = generateStars();
 });
 </script>
 
 <template>
-  <div
-    v-show="isDarkMode"
-    class="stars"
-    :style="{
-      '--star-shadow-before': starShadowBefore,
-      '--star-shadow-after': starShadowAfter
-    }"
-  ></div>
+  <div class="stars">
+    <div
+      v-for="(star, index) in stars"
+      :key="index"
+      class="star"
+      :style="{
+        left: `${star.x}%`,
+        top: `${star.y}%`,
+        width: `${star.size}px`,
+        height: `${star.size}px`,
+        animationDuration: `${star.duration}s`
+      }"
+    ></div>
+  </div>
 </template>
 
 <style scoped>
@@ -28,24 +50,13 @@ defineProps({
   pointer-events: none;
 }
 
-.stars::before,
-.stars::after {
-  content: "";
+.star {
   position: absolute;
-  width: 2px;
-  height: 2px;
   background: currentColor;
   border-radius: 50%;
-  animation: twinkle 2s infinite ease-in-out;
+  animation: twinkle infinite ease-in-out;
   opacity: 0.3;
-}
-
-.stars::before {
-  box-shadow: var(--star-shadow-before);
-}
-
-.stars::after {
-  box-shadow: var(--star-shadow-after);
+  transform: translate(-50%, -50%);
 }
 
 @keyframes twinkle {
