@@ -24,6 +24,11 @@ const links = [
     name: "youtube",
     url: "https://www.youtube.com/@shinlms404",
     icon: "ion:logo-youtube"
+  },
+  {
+    name: "email",
+    url: "mailto:hi@shinlms404.com",
+    icon: "ion:mail"
   }
 ];
 </script>

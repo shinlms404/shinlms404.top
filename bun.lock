@@ -13,6 +13,9 @@
         "vue-router": "latest",
       },
       "devDependencies": {
+        "@iconify-json/ic": "^1.2.2",
+        "@iconify-json/iconoir": "^1.2.7",
+        "@iconify-json/ion": "^1.2.2",
         "@iconify-json/line-md": "^1.2.5",
         "@unocss/nuxt": "^66.1.0-beta.6",
         "unocss": "^66.1.0-beta.6",
@@ -143,6 +146,12 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.24.2", "", { "os": "win32", "cpu": "ia32" }, "sha512-q+iGUwfs8tncmFC9pcnD5IvRHAzmbwQ3GPS5/ceCyHdjXubwQWI12MKWSNSMYLJMq23/IUCvJMS76PDqXe1fxA=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.24.2", "", { "os": "win32", "cpu": "x64" }, "sha512-7VTgWzgMGvup6aSqDPLiW5zHaxYJGTO4OokMjIlrCtf+VpEL+cXKtCvg723iguPYI5oaUNdS+/V7OU2gvXVWEg=="],
+
+    "@iconify-json/ic": ["@iconify-json/ic@1.2.2", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-QmjwS3lYiOmVWgTCEOTFyGODaR/+689+ajep/VsrCcsUN0Gdle5PmIcibDsdmRyrOsW/E77G41UUijdbjQUofw=="],
+
+    "@iconify-json/iconoir": ["@iconify-json/iconoir@1.2.7", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-UDlx2WeWHqopfKRsjOta6fn/KkOhF0MmI2AxoYfakqtMLlznkTnrtY9QVuXZzsbvk+Gyavq2L39VjhcxGbt+LA=="],
+
+    "@iconify-json/ion": ["@iconify-json/ion@1.2.2", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-GysHYDAyy3K4R2Xxsab3I0ZFmQA4oorfIkwX0g6xfZJNVZcFyAlA4pa1jAJC9Bk3cLiWUtnN8ZyWs6cP3nxlnw=="],
 
     "@iconify-json/line-md": ["@iconify-json/line-md@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-6zFKhs6g++kFJLLi+ye5nPoHgjYh44yVLjua0tmbxH1HdImMQZ6rkRsPnBgxADY4bQWiapXBzfoiz7+UBXgtWg=="],
 
