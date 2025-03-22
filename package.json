@@ -19,6 +19,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@iconify-json/line-md": "^1.2.5",
     "@unocss/nuxt": "^66.1.0-beta.6",
     "unocss": "^66.1.0-beta.6"
   }

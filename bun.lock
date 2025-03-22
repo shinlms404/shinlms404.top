@@ -13,6 +13,7 @@
         "vue-router": "latest",
       },
       "devDependencies": {
+        "@iconify-json/line-md": "^1.2.5",
         "@unocss/nuxt": "^66.1.0-beta.6",
         "unocss": "^66.1.0-beta.6",
       },
@@ -142,6 +143,8 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.24.2", "", { "os": "win32", "cpu": "ia32" }, "sha512-q+iGUwfs8tncmFC9pcnD5IvRHAzmbwQ3GPS5/ceCyHdjXubwQWI12MKWSNSMYLJMq23/IUCvJMS76PDqXe1fxA=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.24.2", "", { "os": "win32", "cpu": "x64" }, "sha512-7VTgWzgMGvup6aSqDPLiW5zHaxYJGTO4OokMjIlrCtf+VpEL+cXKtCvg723iguPYI5oaUNdS+/V7OU2gvXVWEg=="],
+
+    "@iconify-json/line-md": ["@iconify-json/line-md@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-6zFKhs6g++kFJLLi+ye5nPoHgjYh44yVLjua0tmbxH1HdImMQZ6rkRsPnBgxADY4bQWiapXBzfoiz7+UBXgtWg=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.522", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-IPTFZ2rGZ5kIwsR913mukn68KIf6EZnls1HFZNWhyvWmaqBxYo5W0ejLxMaW6Ob5dIaTDa9+Ik5kYzQf9uO0Kg=="],
 
