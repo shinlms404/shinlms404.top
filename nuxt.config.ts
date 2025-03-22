@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [{ name: "baidu-site-verification", content: "codeva-oBnKCLc0P8" }]
-    }
+    },
+    pageTransition: { name: "page", mode: "out-in" }
   }
 });
