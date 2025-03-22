@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
-  isDarkMode: Boolean
-});
+  isDarkMode: Boolean,
+})
 </script>
 
 <template>
@@ -14,7 +14,7 @@ defineProps({
           src="/img/avatar.jpg"
           alt="Profile picture"
           class="w-full h-full object-cover"
-        />
+        >
       </div>
     </div>
 
@@ -22,9 +22,13 @@ defineProps({
       <div class="mt-4 text-sm text-gray-600 dark:text-gray-400">
         @shinlms404
       </div>
-      <h1 class="text-4xl font-normal mt-2 mb-6">Charlie Chan</h1>
+      <h1 class="text-4xl font-normal mt-2 mb-6">
+        Charlie Chan
+      </h1>
       <div class="leading-relaxed text-xl">
-        <p class="my-3">Hi! Welcome to my personal website.</p>
+        <p class="my-3">
+          Hi! Welcome to my personal website.
+        </p>
         <p class="my-3">
           I'm a front-end developer and an open source project creator.
         </p>
@@ -38,23 +42,21 @@ defineProps({
             href="https://github.com/shinlms404"
             target="_blank"
             class="hlink-base"
-            >GitHub</a
-          >.
+          >GitHub</a>.
         </p>
         <p class="my-3">
           Of course, you can also follow my
-          <a href="https://x.com/CharlieC404" target="_blank" class="hlink-base"
-            >𝕏</a
-          >
+          <a href="https://x.com/CharlieC404" target="_blank" class="hlink-base">𝕏</a>
           and
           <a
             href="https://blog.shinlms404.top"
             target="_blank"
             class="hlink-base"
-            >Blog</a
-          >.
+          >Blog</a>.
         </p>
-        <p class="my-3">Your star is greatly appreciated!</p>
+        <p class="my-3">
+          Your star is greatly appreciated!
+        </p>
       </div>
     </div>
   </div>

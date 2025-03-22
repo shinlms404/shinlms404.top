@@ -1,16 +1,16 @@
 <script setup>
 defineProps({
-  isDarkMode: Boolean
-});
+  isDarkMode: Boolean,
+})
 
 const links = [
   {
-    name: "afdian",
-    text: "Support me on 爱发电",
-    url: "https://afdian.com/a/shinlms404",
-    icon: "ant-design:thunderbolt-filled"
-  }
-];
+    name: 'afdian',
+    text: 'Support me on 爱发电',
+    url: 'https://afdian.com/a/shinlms404',
+    icon: 'ant-design:thunderbolt-filled',
+  },
+]
 </script>
 
 <template>

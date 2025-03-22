@@ -1,15 +1,15 @@
 <script setup>
 defineProps({
-  isDarkMode: Boolean
-});
+  isDarkMode: Boolean,
+})
 
 const links = [
   {
-    name: "Signature Generator",
-    text: "Signature",
-    url: "https://signature.app.shinlms404.top/"
-  }
-];
+    name: 'Signature Generator',
+    text: 'Signature',
+    url: 'https://signature.app.shinlms404.top/',
+  },
+]
 </script>
 
 <template>

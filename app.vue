@@ -1,16 +1,16 @@
 <script setup>
-import { Analytics } from "@vercel/analytics/nuxt";
+import { Analytics } from '@vercel/analytics/nuxt'
 
 useHead({
-  title: "Charlie Chan",
+  title: 'Charlie Chan',
   meta: [
     {
-      hid: "description",
-      name: "description",
-      content: "Front-end developer and open source project creator"
-    }
-  ]
-});
+      hid: 'description',
+      name: 'description',
+      content: 'Front-end developer and open source project creator',
+    },
+  ],
+})
 </script>
 
 <template>
@@ -20,7 +20,9 @@ useHead({
     >
       <StarsBackground />
       <Header />
-      <div class="flex-1 flex justify-center"><NuxtPage /></div>
+      <div class="flex-1 flex justify-center">
+        <NuxtPage />
+      </div>
       <Footer />
     </div>
     <Analytics />

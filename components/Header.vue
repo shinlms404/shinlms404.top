@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 defineProps({
-  isDarkMode: Boolean
-});
+  isDarkMode: Boolean,
+})
 
-const { isDarkMode, toggleDarkMode } = useDarkMode();
+const { isDarkMode, toggleDarkMode } = useDarkMode()
 </script>
 
 <template>
   <header class="flex justify-between px-10 min-h-15">
-    <nav></nav>
+    <nav />
     <div class="flex items-center gap-5">
       <Time />
       <Me />

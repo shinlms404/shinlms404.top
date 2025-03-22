@@ -1,36 +1,36 @@
 <script setup>
 defineProps({
-  isDarkMode: Boolean
-});
+  isDarkMode: Boolean,
+})
 
 const links = [
-  { name: "github", url: "https://github.com/shinlms404", icon: "uil:github" },
+  { name: 'github', url: 'https://github.com/shinlms404', icon: 'uil:github' },
   {
-    name: "telegram",
-    url: "https://discord.gg/d2YPbeaa",
-    icon: "bi:discord"
+    name: 'telegram',
+    url: 'https://discord.gg/d2YPbeaa',
+    icon: 'bi:discord',
   },
   {
-    name: "twitter",
-    url: "https://x.com/CharlieC404",
-    icon: "ri:twitter-x-fill"
+    name: 'twitter',
+    url: 'https://x.com/CharlieC404',
+    icon: 'ri:twitter-x-fill',
   },
   {
-    name: "threads",
-    url: "https://www.threads.net/@chali.cl",
-    icon: "tabler:brand-threads"
+    name: 'threads',
+    url: 'https://www.threads.net/@chali.cl',
+    icon: 'tabler:brand-threads',
   },
   {
-    name: "youtube",
-    url: "https://www.youtube.com/@shinlms404",
-    icon: "ion:logo-youtube"
+    name: 'youtube',
+    url: 'https://www.youtube.com/@shinlms404',
+    icon: 'ion:logo-youtube',
   },
   {
-    name: "email",
-    url: "mailto:hi@shinlms404.com",
-    icon: "ion:mail"
-  }
-];
+    name: 'email',
+    url: 'mailto:hi@shinlms404.com',
+    icon: 'ion:mail',
+  },
+]
 </script>
 
 <template>

@@ -2,11 +2,11 @@
 defineProps({
   isDarkMode: {
     type: Boolean,
-    required: true
-  }
-});
+    required: true,
+  },
+})
 
-defineEmits(["toggle"]);
+defineEmits(['toggle'])
 </script>
 
 <template>

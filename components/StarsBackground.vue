@@ -1,25 +1,25 @@
 <script setup lang="ts">
-const stars = ref([]);
+const stars = ref([])
 
 function generateStars() {
-  const count = 150;
-  const starsArray = [];
+  const count = 150
+  const starsArray = []
 
   for (let i = 0; i < count; i++) {
     starsArray.push({
       x: Math.random() * 100,
       y: Math.random() * 100,
       size: Math.random() * 1 + 1,
-      duration: Math.random() * 1 + 1
-    });
+      duration: Math.random() * 1 + 1,
+    })
   }
 
-  return starsArray;
+  return starsArray
 }
 
 onMounted(() => {
-  stars.value = generateStars();
-});
+  stars.value = generateStars()
+})
 </script>
 
 <template>
@@ -33,9 +33,9 @@ onMounted(() => {
         top: `${star.y}%`,
         width: `${star.size}px`,
         height: `${star.size}px`,
-        animationDuration: `${star.duration}s`
+        animationDuration: `${star.duration}s`,
       }"
-    ></div>
+    />
   </div>
 </template>
 

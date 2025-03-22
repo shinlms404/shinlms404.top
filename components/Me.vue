@@ -1,3 +1,5 @@
+<script lang="ts" setup></script>
+
 <template>
   <div>
     <NuxtLink class="flex items-center justify-center" to="/">
@@ -5,7 +7,5 @@
     </NuxtLink>
   </div>
 </template>
-
-<script lang="ts" setup></script>
 
 <style></style>
