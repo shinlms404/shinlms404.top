@@ -13,4 +13,11 @@
   "description": "Math calculator with support for multiple operations and units. ",
   "icon": "solar:calculator-outline",
   "category": "Utilities"
+}, {
+  "id": 3,
+  "name": "Base64 Encoder / Decoder",
+  "path": "base64-encoder-decoder",
+  "description": "Base64 encoder and decoder.",
+  "icon": "hugeicons:lock-computer",
+  "category": "Development"
 }]
