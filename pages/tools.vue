@@ -1,7 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+
+</script>
 
 <template>
-  <div>Building...</div>
+  <div class="flex-1 p-8 max-w-7xl">
+    <NuxtPage />
+  </div>
 </template>
-
-<style></style>

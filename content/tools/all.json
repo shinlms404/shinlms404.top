@@ -1,0 +1,16 @@
+[{
+  "id": 1,
+  "name": "Signature",
+  "path": "signature",
+  "description":
+        "Generate handwritten signature as image.",
+  "icon": "carbon:edit",
+  "category": "Utilities"
+}, {
+  "id": 2,
+  "name": "Calculator",
+  "path": "calculator",
+  "description": "Math calculator with support for multiple operations and units. ",
+  "icon": "solar:calculator-outline",
+  "category": "Utilities"
+}]

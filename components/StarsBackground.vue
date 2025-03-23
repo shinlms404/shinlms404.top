@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const stars = ref([])
+const stars = ref<{ x: number, y: number, size: number, duration: number }[]>([])
 
 function generateStars() {
   const count = 150
@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="stars">
+  <div class="stars z-0">
     <div
       v-for="(star, index) in stars"
       :key="index"
@@ -46,7 +46,6 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   pointer-events: none;
 }
 
