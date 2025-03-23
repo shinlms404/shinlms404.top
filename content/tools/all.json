@@ -20,4 +20,18 @@
   "description": "Base64 encoder and decoder.",
   "icon": "hugeicons:lock-computer",
   "category": "Development"
+}, {
+  "id": 4,
+  "name": "Regex",
+  "path": "regex",
+  "description": "Generate a recommended regex.",
+  "icon": "bi:regex",
+  "category": "Development"
+}, {
+  "id": 4,
+  "name": "XML ⇄ JSON",
+  "path": "xml-json",
+  "description": "XML/JSON Converter.",
+  "icon": "si:json-alt-1-fill",
+  "category": "Development"
 }]
