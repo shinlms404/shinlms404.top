@@ -16,7 +16,7 @@ useHead({
 <template>
   <div>
     <div
-      class="bg-base text-base min-h-screen flex flex-col font-mono transition-colors duration-500 relative"
+      class="bg-base text-base min-h-screen flex flex-col font-mono transition-all duration-500 relative"
     >
       <StarsBackground />
       <Header />
