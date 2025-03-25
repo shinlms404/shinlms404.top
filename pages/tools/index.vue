@@ -15,7 +15,7 @@ const currentCategory = ref('')
 
 const allTools = ref<Tool[]>([])
 
-const { data: tools } = await useAsyncData('tools', () => {
+const { data: tools, status } = await useAsyncData('tools', () => {
   return queryCollection('tools')
     .order('id', 'DESC')
     .all()
@@ -149,7 +149,15 @@ watch([searchQuery, currentCategory], () => {
       </button>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div v-if="status === 'pending'" class="flex flex-col items-center justify-center h-96">
+      <svg class="animate-spin h-12 w-12 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" />
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+      </svg>
+      <span class="mt-4 text-gray-600 dark:text-gray-400">Loading...</span>
+    </div>
+
+    <div v-else-if="status === 'success'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <a
         v-for="tool in filteredTools"
         :key="tool.id"
