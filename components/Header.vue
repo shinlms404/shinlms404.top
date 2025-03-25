@@ -21,6 +21,8 @@ const router = useRouter()
       <Time />
       <Me />
       <Tools />
+      <Blog />
+      <Feedback />
       <DarkMode :is-dark-mode="isDarkMode" @toggle="toggleDarkMode" />
     </div>
   </header>
