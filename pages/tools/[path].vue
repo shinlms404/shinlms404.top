@@ -25,10 +25,14 @@ watch(
   },
   { immediate: true },
 )
+
+// useHead({
+//   title: '工具',
+// })
 </script>
 
 <template>
-  <div class="flex-1 p-8 max-w-7xl flex-1 flex flex-col justify-center items-center">
+  <div class="flex-1 max-w-7xl flex-1 flex flex-col justify-center items-center">
     <component :is="toolComponent" v-if="toolComponent" />
     <div v-else>
       加载中...

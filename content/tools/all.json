@@ -28,10 +28,17 @@
   "icon": "bi:regex",
   "category": "Development"
 }, {
-  "id": 4,
+  "id": 5,
   "name": "XML ⇄ JSON",
   "path": "xml-json",
   "description": "XML/JSON Converter.",
   "icon": "si:json-alt-1-fill",
+  "category": "Development"
+}, {
+  "id": 6,
+  "name": "Markdown Editor",
+  "path": "markdown-editor",
+  "description": "Edit Markdown Content online.",
+  "icon": "material-symbols:markdown-paste",
   "category": "Development"
 }]

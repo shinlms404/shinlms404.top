@@ -59,7 +59,7 @@ function convert() {
         placeholder="Enter your input here..."
       />
       <button
-        class="w-full px-4 py-2 bg-black dark:bg-[#292929] rounded hover:bg-[#393939] mb-4"
+        class="w-full px-4 py-2 text-white bg-black dark:bg-[#292929] rounded hover:bg-[#393939] mb-4"
         @click="convert"
       >
         Convert

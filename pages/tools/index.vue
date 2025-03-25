@@ -85,9 +85,9 @@ const visiblePageNumbers = computed(() => {
 })
 
 // 工具选择处理函数
-function selectTool(path: string) {
-  console.warn(`Selected tool with ID: ${path}`)
-  navigateTo(`/tools/${path}`)
+function selectTool(tool: Tool) {
+  console.warn(`Selected tool with ID: ${tool.path}`)
+  navigateTo(`/tools/${tool.path}?name=${tool.name}`)
   // 实际应用中可以跳转到工具详情页
 }
 
@@ -154,7 +154,7 @@ watch([searchQuery, currentCategory], () => {
         v-for="tool in filteredTools"
         :key="tool.id"
         class="block bg-card rounded-lg p-5 shadow-md border-card transition-all duration-300 hover:shadow-lg hover:border-[#393939] cursor-pointer"
-        @click.prevent="selectTool(tool.path)"
+        @click.prevent="selectTool(tool)"
       >
         <div class="flex flex-col  mb-3">
           <div

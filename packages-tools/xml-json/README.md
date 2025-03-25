@@ -1,1 +1,3 @@
-# xml-json
+# XML ⇄ JSON
+
+XML/JSON Converter.
