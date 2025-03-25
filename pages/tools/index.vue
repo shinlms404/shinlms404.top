@@ -176,7 +176,7 @@ watch([searchQuery, currentCategory], () => {
       <div class="flex gap-1">
         <button
           :disabled="currentPage === 1"
-          class="px-3 py-1 rounded border-button text-button disabled:opacity-50 dark:disabled:opacity-40"
+          class="px-3 py-1 rounded border-button text-button disabled:opacity-50 dark:disabled:opacity-40 cursor-pointer"
           @click="currentPage = Math.max(1, currentPage - 1)"
         >
           Previous
@@ -195,7 +195,7 @@ watch([searchQuery, currentCategory], () => {
         </button>
         <button
           :disabled="currentPage === totalPages"
-          class="px-3 py-1 rounded border-button text-button disabled:opacity-50 dark:disabled:opacity-40"
+          class="px-3 py-1 rounded border-button text-button disabled:opacity-50 dark:disabled:opacity-40 cursor-pointer"
           @click="currentPage = Math.min(totalPages, currentPage + 1)"
         >
           Next
