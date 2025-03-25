@@ -46,7 +46,7 @@ defineProps({
         </p>
         <p class="my-3">
           Of course, you can also follow my
-          <a href="https://x.com/CharlieC404" target="_blank" class="hlink-base">𝕏</a>
+          <a href="https://x.com/shinlms404" target="_blank" class="hlink-base">𝕏</a>
           and
           <a
             href="https://blog.shinlms404.top"

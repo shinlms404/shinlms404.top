@@ -12,8 +12,13 @@ const links = [
   },
   {
     name: 'twitter',
-    url: 'https://x.com/CharlieC404',
+    url: 'https://x.com/shinlms404',
     icon: 'ri:twitter-x-fill',
+  },
+  {
+    name: 'bluesky',
+    url: 'https://bsky.app/profile/shinlms404.bsky.social',
+    icon: 'ri:bluesky-fill',
   },
   {
     name: 'threads',
