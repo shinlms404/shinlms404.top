@@ -130,13 +130,13 @@ function insertFormat(format) {
         <!-- Editor -->
         <textarea
           v-model="markdownContent"
-          class="flex-1 p-4 resize-none outline-none bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-mono"
+          class="flex-1 p-4 resize-none outline-none bg-white dark:bg-[#1e1e1e] text-gray-800 dark:text-gray-200 font-mono"
           placeholder="Enter Markdown content here..."
         />
       </div>
 
       <!-- Right preview -->
-      <div class="w-1/2 p-4 overflow-auto bg-white dark:bg-gray-900">
+      <div class="w-1/2 p-4 overflow-auto bg-white dark:bg-[#1e1e1e]">
         <div
           class="prose dark:prose-invert max-w-none"
           v-html="renderedHTML"

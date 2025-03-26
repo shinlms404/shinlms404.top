@@ -41,4 +41,18 @@
   "description": "Edit Markdown Content online.",
   "icon": "material-symbols:markdown-paste",
   "category": "Development"
+}, {
+  "id": 7,
+  "name": "Currency Exchange",
+  "path": "currency-exchange",
+  "description": "Real-time currency exchange rate calculator with 150+ supported currencies.",
+  "icon": "material-symbols:currency-exchange",
+  "category": "Utilities"
+}, {
+  "id": 8,
+  "name": "OCR Image to Text",
+  "path": "ocr-image-to-text",
+  "description": "Extract text from images using OCR technology.",
+  "icon": "mdi:text-recognition",
+  "category": "Utilities"
 }]
