@@ -14,19 +14,26 @@ const searchQuery = ref('')
 const currentCategory = ref('')
 
 const allTools = ref<Tool[]>([])
+const isLoading = ref(true)
 
-const { data: tools, status } = await useAsyncData('tools', () => {
+// 使用 suspense 包装数据获取
+const { data: _tools } = await useAsyncData('tools', () => {
   return queryCollection('tools')
     .order('id', 'DESC')
     .all()
+}, {
+  // 添加缓存选项
+  server: true,
+  lazy: false,
+  immediate: true,
+  transform: (data) => {
+    if (data && data.length > 0) {
+      allTools.value = data[0].meta.body as Tool[]
+    }
+    isLoading.value = false
+    return data
+  },
 })
-
-if (tools.value && tools.value.length > 0) {
-  allTools.value = tools.value[0].meta.body as Tool[]
-}
-else {
-  console.warn('tools is null or empty')
-}
 
 // 工具函数：判断工具是否匹配搜索条件
 function matchesSearch(tool: Tool, query: string): boolean {
@@ -149,22 +156,27 @@ watch([searchQuery, currentCategory], () => {
       </button>
     </div>
 
-    <div v-if="status === 'pending'" class="flex flex-col items-center justify-center h-96">
-      <svg class="animate-spin h-12 w-12 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" />
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-      </svg>
-      <span class="mt-4 text-gray-600 dark:text-gray-400">Loading...</span>
+    <!-- 骨架屏加载 -->
+    <div v-if="isLoading" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-for="i in 6" :key="i" class="bg-card rounded-lg p-5 shadow-md border-card animate-pulse">
+        <div class="flex flex-col mb-3">
+          <div class="w-9 h-9 rounded-lg bg-gray-200 dark:bg-gray-700" />
+          <div class="h-6 bg-gray-200 dark:bg-gray-700 rounded mt-2 w-3/4" />
+        </div>
+        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
+        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3 mt-2" />
+      </div>
     </div>
 
-    <div v-else-if="status === 'success'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- 实际内容 -->
+    <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <a
         v-for="tool in filteredTools"
         :key="tool.id"
         class="block bg-card rounded-lg p-5 shadow-md border-card transition-all duration-300 hover:shadow-lg hover:border-[#393939] cursor-pointer"
         @click.prevent="selectTool(tool)"
       >
-        <div class="flex flex-col  mb-3">
+        <div class="flex flex-col mb-3">
           <div
             class="w-9 h-9 rounded-lg bg-icon flex items-center justify-center mr-3"
           >
