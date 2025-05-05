@@ -10,6 +10,7 @@ interface Tool {
   icon: string
   category: string
   isExternal?: boolean
+  recommended?: boolean
 }
 
 const currentPage = ref(1)
@@ -95,6 +96,11 @@ const visiblePageNumbers = computed(() => {
   ]
 })
 
+// 获取推荐工具
+const recommendedTools = computed(() =>
+  allTools.value.filter(tool => tool.recommended),
+)
+
 // 工具选择处理函数
 function selectTool(tool: Tool) {
   if (tool.isExternal) {
@@ -126,6 +132,21 @@ watch([searchQuery, currentCategory], () => {
         <p class="text-sm sm:text-[1rem] font-light text-gray-600 dark:text-gray-400">
           Simple, powerful utilities.
         </p>
+      </div>
+    </div>
+
+    <!-- 推荐工具部分 -->
+    <div v-if="!isLoading && recommendedTools.length > 0" class="mt-10">
+      <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4">
+        Recommended Tools
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ToolCard
+          v-for="tool in recommendedTools"
+          :key="tool.id"
+          :tool="tool"
+          @select="selectTool"
+        />
       </div>
     </div>
 
@@ -177,60 +198,20 @@ watch([searchQuery, currentCategory], () => {
 
     <!-- 实际内容 -->
     <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a
+      <ToolCard
         v-for="tool in filteredTools"
         :key="tool.id"
-        class="block bg-card rounded-lg p-5 shadow-md border-card transition-all duration-300 hover:shadow-lg hover:border-[#393939] cursor-pointer relative"
-        @click.prevent="selectTool(tool)"
-      >
-        <div class="flex flex-col mb-3">
-          <div
-            class="w-9 h-9 rounded-lg bg-icon flex items-center justify-center mr-3"
-          >
-            <Icon :name="tool.icon" class="text-xl text-gray-700 dark:text-slate-300" />
-          </div>
-          <h2 class="text-lg font-medium text-gray-800 dark:text-white truncate mt-2">
-            {{ tool.name }}
-          </h2>
-        </div>
-        <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
-          {{ tool.description }}
-        </p>
-        <div v-if="tool.isExternal" class="absolute top-2 right-2">
-          <Icon name="material-symbols:open-in-new" class="text-gray-500 dark:text-gray-400" />
-        </div>
-      </a>
+        :tool="tool"
+        @select="selectTool"
+      />
     </div>
 
-    <div class="mt-10 flex justify-center">
-      <div class="flex gap-1">
-        <button
-          :disabled="currentPage === 1"
-          class="px-3 py-1 rounded border-button text-button disabled:opacity-50 dark:disabled:opacity-40 cursor-pointer"
-          @click="currentPage = Math.max(1, currentPage - 1)"
-        >
-          Previous
-        </button>
-        <button
-          v-for="page in visiblePageNumbers"
-          :key="page"
-          class="px-3 py-1 rounded" :class="[
-            currentPage === page
-              ? 'bg-button-active'
-              : 'bg-gray-200 dark:bg-[#191919] text-button border-button',
-          ]"
-          @click="typeof page === 'number' && (currentPage = page)"
-        >
-          {{ page }}
-        </button>
-        <button
-          :disabled="currentPage === totalPages"
-          class="px-3 py-1 rounded border-button text-button disabled:opacity-50 dark:disabled:opacity-40 cursor-pointer"
-          @click="currentPage = Math.min(totalPages, currentPage + 1)"
-        >
-          Next
-        </button>
-      </div>
+    <div class="mt-10">
+      <Pagination
+        v-model:current-page="currentPage"
+        :total-pages="totalPages"
+        :visible-page-numbers="visiblePageNumbers"
+      />
     </div>
   </div>
 </template>

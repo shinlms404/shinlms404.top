@@ -13,6 +13,7 @@ export default defineContentConfig({
         icon: z.string(),
         category: z.string(),
         isExternal: z.boolean().optional(),
+        recommended: z.boolean(),
       }),
     }),
   },

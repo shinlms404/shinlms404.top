@@ -5,14 +5,16 @@
   "description":
         "Generate handwritten signature as image.",
   "icon": "carbon:edit",
-  "category": "Utilities"
+  "category": "Utilities",
+  "recommended": true
 }, {
   "id": 2,
   "name": "Calculator",
   "path": "calculator",
   "description": "Math calculator with support for multiple operations and units. ",
   "icon": "solar:calculator-outline",
-  "category": "Utilities"
+  "category": "Utilities",
+  "recommended": true
 }, {
   "id": 3,
   "name": "Base64 Encoder / Decoder",
@@ -63,4 +65,11 @@
   "icon": "mingcute:grok-line",
   "category": "AI",
   "isExternal": true
+}, {
+  "id": 10,
+  "name": "GitHub Info",
+  "path": "github-info",
+  "description": "Query GitHub user information including followers, following, and public repositories.",
+  "icon": "mdi:github",
+  "category": "Development"
 }]
