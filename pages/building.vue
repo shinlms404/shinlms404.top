@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-
+const { setTitle } = usePageTitle()
+setTitle('Building')
 </script>
 
 <template>

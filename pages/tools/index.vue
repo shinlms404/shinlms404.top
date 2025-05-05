@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+const { setTitle } = usePageTitle()
+setTitle('Tools')
+
 interface Tool {
   id: number
   name: string
@@ -6,6 +9,7 @@ interface Tool {
   description: string
   icon: string
   category: string
+  isExternal?: boolean
 }
 
 const currentPage = ref(1)
@@ -93,9 +97,12 @@ const visiblePageNumbers = computed(() => {
 
 // 工具选择处理函数
 function selectTool(tool: Tool) {
-  console.warn(`Selected tool with ID: ${tool.path}`)
-  navigateTo(`/tools/${tool.path}?name=${tool.name}`)
-  // 实际应用中可以跳转到工具详情页
+  if (tool.isExternal) {
+    window.open(tool.path, '_blank')
+  }
+  else {
+    navigateTo(`/tools/${tool.path}?name=${tool.name}`)
+  }
 }
 
 // 监听筛选条件变化，重置到第一页
@@ -173,7 +180,7 @@ watch([searchQuery, currentCategory], () => {
       <a
         v-for="tool in filteredTools"
         :key="tool.id"
-        class="block bg-card rounded-lg p-5 shadow-md border-card transition-all duration-300 hover:shadow-lg hover:border-[#393939] cursor-pointer"
+        class="block bg-card rounded-lg p-5 shadow-md border-card transition-all duration-300 hover:shadow-lg hover:border-[#393939] cursor-pointer relative"
         @click.prevent="selectTool(tool)"
       >
         <div class="flex flex-col mb-3">
@@ -189,6 +196,9 @@ watch([searchQuery, currentCategory], () => {
         <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
           {{ tool.description }}
         </p>
+        <div v-if="tool.isExternal" class="absolute top-2 right-2">
+          <Icon name="material-symbols:open-in-new" class="text-gray-500 dark:text-gray-400" />
+        </div>
       </a>
     </div>
 

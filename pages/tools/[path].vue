@@ -21,6 +21,9 @@ watch(
     const name = path.split('/').pop()
     if (name) {
       loadToolComponent(name)
+      // 设置页面标题
+      const { setTitle } = usePageTitle()
+      setTitle(name, 'Tools')
     }
   },
   { immediate: true },

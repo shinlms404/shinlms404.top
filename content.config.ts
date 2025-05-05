@@ -12,6 +12,7 @@ export default defineContentConfig({
         description: z.string(),
         icon: z.string(),
         category: z.string(),
+        isExternal: z.boolean().optional(),
       }),
     }),
   },

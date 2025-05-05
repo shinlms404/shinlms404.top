@@ -55,4 +55,12 @@
   "description": "Extract text from images using OCR technology.",
   "icon": "mdi:text-recognition",
   "category": "Utilities"
+}, {
+  "id": 9,
+  "name": "Grok",
+  "path": "https://grok.com/",
+  "description": "Grok is a free AI assistant designed by xAI to maximize truth and objectivity.",
+  "icon": "mingcute:grok-line",
+  "category": "AI",
+  "isExternal": true
 }]
